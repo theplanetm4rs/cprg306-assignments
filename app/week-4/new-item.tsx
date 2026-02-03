@@ -23,10 +23,10 @@ export default function NewItem() {
   };
 
   // add item to the stand (combine name + category)
-  const addToStand = () => {
+  const addToItems = () => {
     const trimmedName = name.trim();
     if (!trimmedName) {
-      alert("Please enter an item name.");
+      alert("Oops! Don't forget to add the name of the item 🙉");
       return;
     }
 
@@ -59,7 +59,7 @@ export default function NewItem() {
   };
 
   // clear entire stand
-  const clearStand = () => {
+  const clearItems = () => {
     setItems([]);
   };
 
@@ -83,7 +83,7 @@ export default function NewItem() {
         </h2>
       </div>
 
-      {/* Stand summary / inventory list */}
+      {/* Item List */}
       <div className="mb-8 p-5 bg-slate-800 rounded-lg border border-slate-600 shadow-inner">
         <h3 className="text-xl font-semibold text-emerald-400 mb-3 text-center">
             Paul's Yummy Food Stock 🍌
@@ -179,7 +179,7 @@ export default function NewItem() {
       {/* Action buttons */}
       <div className="flex flex-col gap-4">
         <button
-          onClick={addToStand}
+          onClick={addToItems}
           className="py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg rounded-lg transition-colors shadow-md"
         >
            ✅ Add Item
@@ -187,7 +187,7 @@ export default function NewItem() {
 
         {items.length > 0 && (
           <button
-            onClick={clearStand}
+            onClick={clearItems}
             className="py-3.5 bg-red-700/80 hover:bg-red-600 text-white font-bold text-lg rounded-lg transition-colors shadow-md border border-red-600/50"
           >
             Clear Stand ❌
