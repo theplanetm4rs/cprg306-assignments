@@ -11,6 +11,7 @@ export default function NewItem() {
   const [items, setItems] = useState<
     { name: string; category: string; quantity: number }[]
   >([]);
+  const [nameTouched, setNameTouched] = useState(false);
 
   // increment quantity
   const increment = () => {
@@ -34,7 +35,7 @@ export default function NewItem() {
   const addToItems = () => {
     const trimmedName = name.trim();
     if (!trimmedName || !name || name.length < 2) {
-      alert("Oops! That's an invalid name for the item (min. charcters 2) 🙉");
+      alert("Oops! That item name is invalid. Please try again (min. charcters 2) 🙉");
       return;
     }
 
@@ -129,8 +130,9 @@ export default function NewItem() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          onBlur={() => setNameTouched(true)}
           placeholder="Enter item name"
-          className={`w-full px-4 py-3 bg-slate-800 text-white rounded-lg border focus:outline-none focus:border-emerald-500 ${name.trim() === '' ? 'border-red-500' : 'border-slate-600'}`}
+          className={`w-full px-4 py-3 bg-slate-800 text-white rounded-lg border focus:outline-none focus:border-emerald-500 ${nameTouched && name.trim() === '' ? 'border-red-500' : 'border-slate-600'}`}
         />
       </div>
 
@@ -182,7 +184,7 @@ export default function NewItem() {
       </div>
 
       {/* Action buttons */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4"> 
         <button
           onClick={addToItems}
           disabled={isButtonDisabled}
