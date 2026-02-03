@@ -7,14 +7,14 @@ export default function NewItem() {
   // states for quantity, item name, category, and list of items
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
-  const [category, setCategory] = useState("Items");
+  const [category, setCategory] = useState("Other");
   const [items, setItems] = useState<
     { name: string; category: string; quantity: number }[]
   >([]);
 
   // increment quantity
   const increment = () => {
-    if (quantity < 20) setQuantity(quantity + 1);
+    if (quantity < 99) setQuantity(quantity + 1);
   };
 
   // decrement quantity
@@ -22,11 +22,19 @@ export default function NewItem() {
     if (quantity > 1) setQuantity(quantity - 1);
   };
 
+  // handle input change for name
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  // determine if the button should be disabled
+  const isButtonDisabled = name.trim() === "";
+
   // add item to the stand (combine name + category)
   const addToItems = () => {
     const trimmedName = name.trim();
-    if (!trimmedName) {
-      alert("Oops! Don't forget to add the name of the item 🙉");
+    if (!trimmedName || !name || name.length < 2) {
+      alert("Oops! That's an invalid name for the item (min. charcters 2) 🙉");
       return;
     }
 
@@ -122,7 +130,7 @@ export default function NewItem() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter item name"
-          className="w-full px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:outline-none focus:border-emerald-500"
+          className={`w-full px-4 py-3 bg-slate-800 text-white rounded-lg border focus:outline-none focus:border-emerald-500 ${name.trim() === '' ? 'border-red-500' : 'border-slate-600'}`}
         />
       </div>
 
@@ -163,23 +171,21 @@ export default function NewItem() {
           <button
             type="button"
             onClick={increment}
-            disabled={quantity >= 20}
+            disabled={quantity >= 99}
             className="w-14 h-12 text-3xl font-bold bg-slate-700 hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed rounded-r transition-colors"
           >
             +
           </button>
         </div>
 
-        <p className="text-sm text-slate-400">Allowed range: 1–20</p>
-        <p className="text-sm text-slate-400">
-          (Paul can only hold so many items...after all, he is quite tiny)
-        </p>
+        <p className="text-sm text-slate-400">Allowed range: 1 – 99</p>
       </div>
 
       {/* Action buttons */}
       <div className="flex flex-col gap-4">
         <button
           onClick={addToItems}
+          disabled={isButtonDisabled}
           className="py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg rounded-lg transition-colors shadow-md"
         >
            ✅ Add Item
@@ -190,7 +196,7 @@ export default function NewItem() {
             onClick={clearItems}
             className="py-3.5 bg-red-700/80 hover:bg-red-600 text-white font-bold text-lg rounded-lg transition-colors shadow-md border border-red-600/50"
           >
-            Clear Stand ❌
+            Clear Items ❌
           </button>
         )}
       </div>
