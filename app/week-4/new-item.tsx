@@ -29,7 +29,7 @@ export default function NewItem() {
   };
 
   // determine if the button should be disabled
-  const isButtonDisabled = name.trim() === "";
+  const isButtonDisabled = name.trim().length < 2;
 
   // add item to the stand (combine name + category)
   const addToItems = () => {
@@ -133,7 +133,7 @@ export default function NewItem() {
           onChange={(e) => setName(e.target.value)}
           onBlur={() => setNameTouched(true)}
           placeholder="Enter item name"
-          className={`w-full px-4 py-3 bg-slate-800 text-white rounded-lg border focus:outline-none focus:border-emerald-500 ${nameTouched && name.trim() === '' ? 'border-red-500' : 'border-slate-600'}`}
+          className={`w-full px-4 py-3 bg-slate-800 text-white rounded-lg border focus:outline-none focus:border-emerald-500 ${nameTouched && name.trim().length < 2 ? 'border-red-500' : 'border-slate-600'}`}
         />
       </div>
 
