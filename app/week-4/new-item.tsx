@@ -58,6 +58,7 @@ export default function NewItem() {
     setName("");
     setQuantity(1);
     setCategory("Other"); // reset to default
+    setNameTouched(false);
   };
 
   // remove a specific item
