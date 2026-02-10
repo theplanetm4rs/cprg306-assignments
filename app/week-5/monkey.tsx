@@ -14,7 +14,7 @@ export interface Monkey {
 export default function Monkey(props: Monkey) {
     const { name, age, favFood, photo } = props;
     return (
-        <div className="flex gap-5 text-white bg-slate-700 rounded-md max-w-auto px-4 py-2 m-3">
+        <div className="flex gap-5 text-white bg-slate-700 rounded-md max-w-auto px-4 py-2 m-3 justify-between">
             <div className="flex-col justify-between items-center">
                 <h3 className="font-semibold">{name}</h3>
                 <p className="font-semibold">Age — {age}</p>
