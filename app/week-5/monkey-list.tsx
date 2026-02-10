@@ -54,7 +54,7 @@ function MonkeyList() {
 					onClick={() => setViewMode((v) => (v === "group" ? "list" : "group"))}
 					className="p-3.5 bg-[#414c50] hover:bg-[#262d31] text-white font-bold text-lg rounded-lg transition-colors shadow-md"
 				>
-					{viewMode === "group" ? "Show list of Monkeys" : "Group Monkeys"}
+					{viewMode === "group" ? "Show List of Monkeys" : "Group Monkeys"}
 				</button>
 			</div>
 			{viewMode === "list" ? (
