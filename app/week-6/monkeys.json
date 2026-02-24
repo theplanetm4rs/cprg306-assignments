@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1h2GJKH12gkHG31h1H",
+    "name": "TumTum",
+    "age": 3,
+    "favFood": "fig 🌰",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  },
+  {
+    "id": "2KJH3k2j3H1k2J3K1H",
+    "name": "Paul",
+    "age": 5,
+    "favFood": "banana 🍌",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  },
+  {
+    "id": "3h2KJH3k2j3H1k2J3",
+    "name": "George",
+    "age": 10,
+    "favFood": "cherry 🍒",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  },
+  {
+    "id": "4k2J3K1H2GJKH12gk",
+    "name": "Don",
+    "age": 15,
+    "favFood": "coffee ☕",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  },
+  {
+    "id": "5H1h1H2KJH3k2j3H",
+    "name": "Monkichi",
+    "age": 6,
+    "favFood": "banana 🍌",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  },
+  {
+    "id": "6H1k2J3K1H2GJKH1",
+    "name": "Donkey Kong",
+    "age": 25,
+    "favFood": "mushroom 🍄",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  },
+  {
+    "id": "7gkHG31h1H2KJH3k",
+    "name": "Ignacio",
+    "age": 20,
+    "favFood": "hamburger 🍔",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  },
+    {
+    "id": "8j3H1k2J3K1H2GJK",
+    "name": "Frank",
+    "age": 20,
+    "favFood": "fig 🌰",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  },
+  {
+    "id": "9H12gkHG31h1H2KJ",
+    "name": "Vinh",
+    "age": 20,
+    "favFood": "banh mi 🥪",
+    "photo": "https://palmpals.com/cdn/shop/files/33857_93ca7673-a384-4051-a3ac-19016a1aa349.jpg?v=1746133322"
+  }
+]
