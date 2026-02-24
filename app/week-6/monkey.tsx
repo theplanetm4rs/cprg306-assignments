@@ -8,26 +8,18 @@ export interface Monkey {
     name: string;
     age: number;
     favFood: string;
-    photo: string;
+    species: string;
 }
 
 export default function Monkey(props: Monkey) {
-    const { name, age, favFood, photo } = props;
+    const { name, age, favFood, species } = props;
     return (
         <div className="flex gap-5 text-white bg-slate-700 rounded-md max-w-auto px-4 py-2 m-3 justify-between">
             <div className="flex-col justify-between items-center">
                 <h3 className="font-semibold">{name}</h3>
                 <p className="font-semibold">Age — {age}</p>
                 <p className="font-semibold">Favourite Food — {favFood}</p>
-            </div>
-            <div> 
-                <Image 
-                    className="rounded-md"
-                    src={photo}
-                    alt="monkey photo"
-                    width={100}
-                    height={100}
-                />
+                <p className="font-semibold">Species — {species}</p>
             </div>
         </div>
     );
