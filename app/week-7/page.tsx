@@ -33,7 +33,7 @@ export default function ShoppingListPage() {
   return (
     <main className="flex flex-col items-center min-h-screen py-10 bg-gradient-to-b from-slate-950 to-slate-900 px-4">
       <h1 className="text-4xl md:text-5xl font-bold text-emerald-400 mb-10 text-center">
-        🛒 Smart Shopping List + Meal Ideas
+        🛒 Shopping List + Meal Ideas 🍲
       </h1>
 
       {/* Add New Item */}
